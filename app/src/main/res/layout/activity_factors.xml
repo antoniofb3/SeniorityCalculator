@@ -10,4 +10,10 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.antoniofb.senioritycalculator.factors.FactorsActivity">
 
+    <ListView
+        android:id="@+id/factorsList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </ListView>
+
 </RelativeLayout>
