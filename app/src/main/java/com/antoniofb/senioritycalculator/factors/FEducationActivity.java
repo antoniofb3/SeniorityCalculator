@@ -32,7 +32,7 @@ public class FEducationActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 if (position == 0){
                     startActivity(new Intent(FEducationActivity.this, FactorsActivity.class));
-                    //Toast.makeText(this,"You choose ", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(FEducationActivity.this,"You choose " + formalEducation[0], Toast.LENGTH_LONG).show();
                 }
             }
         });
