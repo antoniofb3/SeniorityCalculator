@@ -1,27 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_factors"
+    android:id="@+id/activity_feducation"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.antoniofb.senioritycalculator.factors.FactorsActivity">
+    tools:context="com.antoniofb.senioritycalculator.factors.FEducationActivity">
 
     <TextView
         android:id="@+id/tvInstructions"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Select the factor you want to rate:"
+        android:text="Select the correct option for this employee:"
         android:textSize="18sp"/>
 
     <ListView
-        android:id="@+id/factorsList"
+        android:id="@+id/educationList"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/tvInstructions">
-    </ListView>
+        android:layout_below="@id/tvInstructions"></ListView>
 
 </RelativeLayout>
