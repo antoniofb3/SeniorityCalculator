@@ -1,6 +1,7 @@
 package com.antoniofb.senioritycalculator.registration;
 
 import android.content.Intent;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -26,6 +27,8 @@ public class RegistrationActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registration);
+        ActionBar ab = getSupportActionBar();
+        ab.setTitle("Registration Screen");
         init();
     }
 
@@ -56,19 +59,23 @@ public class RegistrationActivity extends AppCompatActivity {
     }
 
     public void registerEmployee(){
-        //String employeeName, employeeJob, employeeSeniority;
+        String employeeName, employeeJob, employeeSeniority;
         if (isFormIsValidated()){
-            /*
+            Intent i = new Intent(this,FactorsActivity.class);
             employeeName = etEmployeeName.getText().toString();
             employeeJob = etEmployeeJob.getText().toString();
             employeeSeniority = etEmployeeSeniority.getText().toString();
-            Bundle bundle = new Bundle();
-            bundle.putString("NAME", employeeName);
-            bundle.putString("JOB", employeeJob);
-            bundle.putString("JOB", employeeSeniority);
-            */
+            //Bundle bundle = new Bundle();
+            //bundle.putString("NAME", employeeName);
+            //bundle.putString("JOB", employeeJob);
+            //bundle.putString("JOB", employeeSeniority);
+            //i.putExtras(bundle);
+            i.putExtra("Name", employeeName);
+            i.putExtra("Job", employeeJob);
+            i.putExtra("Seniority", employeeSeniority);
+            startActivity(i);
 
-            startActivity(new Intent(RegistrationActivity.this, FactorsActivity.class));
+            //startActivity(new Intent(RegistrationActivity.this, FactorsActivity.class));
         }
     }
 

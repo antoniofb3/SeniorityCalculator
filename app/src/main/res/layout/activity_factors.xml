@@ -11,9 +11,27 @@
     tools:context="com.antoniofb.senioritycalculator.factors.FactorsActivity">
 
     <TextView
+        android:id="@+id/tvEmployeeName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/tvEmployeeJob"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvEmployeeName"/>
+
+    <TextView
+        android:id="@+id/tvEmployeeSeniority"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvEmployeeJob"/>
+
+    <TextView
         android:id="@+id/tvInstructions"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@id/tvEmployeeSeniority"
         android:text="Select the factor you want to rate:"
         android:textSize="18sp"/>
 

@@ -1,6 +1,7 @@
 package com.antoniofb.senioritycalculator.factors;
 
 import android.content.Intent;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -20,6 +21,8 @@ public class FEducationActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_feducation);
+        ActionBar ab = getSupportActionBar();
+        ab.setTitle("Formal Education");
         formalEducationList();
     }
 

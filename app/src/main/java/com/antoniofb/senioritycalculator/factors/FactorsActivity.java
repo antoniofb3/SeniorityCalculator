@@ -1,12 +1,14 @@
 package com.antoniofb.senioritycalculator.factors;
 
 import android.content.Intent;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import com.antoniofb.senioritycalculator.R;
 
@@ -14,12 +16,29 @@ public class FactorsActivity extends AppCompatActivity {
 
     private ListView lvFactors;
     private String[] factors = {"Formal Education", "Experience", "Management", "Communication", "Technical Skills", "Leadership Experience", "Empowerment"};
+    private TextView tvEmpData;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_factors);
+        ActionBar ab = getSupportActionBar();
+        ab.setTitle("Factors Screen");
+        //showEmployeeData();
         factorsList();
+    }
+
+    public void showEmployeeData(){
+        //better to use singleton for persistant data???
+        Bundle bundle = getIntent().getExtras();
+        String empName;
+        empName = bundle.getString("Name");
+        tvEmpData = (TextView) findViewById(R.id.tvEmployeeName);
+        tvEmpData.setText(empName);
+        //empName = bundle.getString("Job");
+        //tvEmpData = (TextView) findViewById(R.id.tvEmployeeJob);
+        //tvEmpData.setText(empName);
+
     }
 
     public void factorsList(){
