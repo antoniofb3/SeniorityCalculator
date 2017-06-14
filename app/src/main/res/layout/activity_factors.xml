@@ -42,4 +42,11 @@
         android:layout_below="@id/tvInstructions">
     </ListView>
 
+    <fragment
+        android:id="@+id/fragment_place"
+        android:name="layout.FormalEducationFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/factorsList"></fragment>
+
 </RelativeLayout>

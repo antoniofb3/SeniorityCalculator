@@ -1,6 +1,11 @@
 package com.antoniofb.senioritycalculator.factors;
 
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -12,6 +17,9 @@ import android.widget.TextView;
 
 import com.antoniofb.senioritycalculator.R;
 
+import layout.ExperienceFragment;
+import layout.FormalEducationFragment;
+
 public class FactorsActivity extends AppCompatActivity {
 
     private ListView lvFactors;
@@ -22,9 +30,10 @@ public class FactorsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_factors);
-        ActionBar ab = getSupportActionBar();
-        ab.setTitle("Factors Screen");
-        //showEmployeeData();
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setTitle("Factors Screen");
+        //actionBar.setBackgroundDrawable(new ColorDrawable());//to define action bar color
+        //showEmployeeData();//to show employee data in factor activity
         factorsList();
     }
 
@@ -48,9 +57,21 @@ public class FactorsActivity extends AppCompatActivity {
         lvFactors.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                //String value = (String)lvFactors
                 if (position == 0){
-                    startActivity(new Intent(FactorsActivity.this,FEducationActivity.class));
+                    Fragment fragment;
+                    fragment = new FormalEducationFragment();
+                    FragmentManager fragmentManager = getSupportFragmentManager();
+                    FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                    fragmentTransaction.replace(R.id.fragment_place, fragment);
+                    fragmentTransaction.commit();
+                }
+                if (position == 1){
+                    Fragment fragment;
+                    fragment = new ExperienceFragment();
+                    FragmentManager fragmentManager = getSupportFragmentManager();
+                    FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                    fragmentTransaction.replace(R.id.fragment_place, fragment);
+                    fragmentTransaction.commit();
                 }
             }
         });
