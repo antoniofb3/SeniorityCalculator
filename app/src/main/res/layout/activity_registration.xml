@@ -15,6 +15,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Employee name"
+        android:imeOptions="actionNext"
+        android:inputType="textPersonName"
+        android:lines="1"
+        android:maxLines="1"
         android:layout_centerHorizontal="true" />
 
     <EditText
@@ -22,6 +26,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Employee job"
+        android:imeOptions="actionNext"
+        android:inputType="textCapSentences"
+        android:lines="1"
+        android:maxLines="1"
         android:layout_below="@id/employeeName"/>
 
     <EditText
@@ -29,6 +37,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Employee seniority"
+        android:imeOptions="actionDone"
+        android:inputType="textCapSentences"
+        android:lines="1"
+        android:maxLines="1"
         android:layout_below="@id/employeeJob"/>
 
     <Button
