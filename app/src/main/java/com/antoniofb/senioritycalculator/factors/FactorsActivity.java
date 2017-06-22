@@ -38,7 +38,7 @@ public class FactorsActivity extends AppCompatActivity {
         actionBar.setTitle("Factors Screen");
         //actionBar.setBackgroundDrawable(new ColorDrawable());//to define action bar color
         showEmployeeData();//to show employee data in factor activity
-        factorsList();
+        showFactorsList();
     }
 
     public void showEmployeeData(){
@@ -52,7 +52,7 @@ public class FactorsActivity extends AppCompatActivity {
         tvEmpData.setText(empData[2]);
     }
 
-    public void factorsList(){
+    public void showFactorsList(){
         lvFactors = (ListView) findViewById(R.id.factorsList);
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,R.layout.activity_listview, factors);
         lvFactors.setAdapter(adapter);
